@@ -162,6 +162,7 @@ class FileData(GradioModel):
     url: Optional[str] = None  # normalised server url
     size: Optional[int] = None  # size in bytes
     orig_name: Optional[str] = None  # original filename
+    stem_name: Optional[str] = None
     mime_type: Optional[str] = None
     is_stream: bool = False
     meta: dict = {"_type": "gradio.FileData"}
@@ -175,6 +176,7 @@ class FileData(GradioModel):
                 self.url,
                 self.size,
                 self.orig_name,
+                self.stem_name,
                 self.mime_type,
             ]
         )

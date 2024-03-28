@@ -269,7 +269,7 @@ class Audio(
                 raise ValueError(f"Cannot process {value} as Audio")
             file_path = str(value)
             orig_name = Path(file_path).name if Path(file_path).exists() else None
-        return FileData(path=file_path, orig_name=orig_name)
+        return FileData(path=file_path, orig_name=orig_name, stem_name = self.label)
 
     def stream_output(
         self, value, output_id: str, first_chunk: bool
